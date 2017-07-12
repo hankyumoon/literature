@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0038)http://wordpress-jodoin.dmi.usherb.ca/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Change detection benchmark web site</title>
+		
+		<meta http-equiv="pragma" content="no-cache">
+		
+		<link rel="stylesheet" href="./style.css" type="text/css" media="all">
+		
+		
+		<script type="text/javascript" async="" src="./ga.js"></script><script src="./jquery.min.js" type="text/javascript"></script> 
+		<script src="./jquery-ui.min.js" type="text/javascript"></script>
+		
+		
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+
+			var timeout         = 500;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+			_gaq.push(['_setAccount', 'UA-31024954-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+			// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	// get new layer and show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+		</script>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="wrapper">
+				<div id="navigation">
+						
+					<ul>
+						<li id="layer1" class="page_item current_page_item"><a href="http://wordpress-jodoin.dmi.usherb.ca/" title="Home">Home</a></li>
+						<li id="layer1" class="page_item "><a href="http://wordpress-jodoin.dmi.usherb.ca/#" title="Results" onmouseover="mopen(&#39;m1&#39;)" onmouseout="mclosetime()">Results</a>
+							<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+								<a href="http://wordpress-jodoin.dmi.usherb.ca/resultEvaluation">EVALUATION</a>
+								<a href="http://wordpress-jodoin.dmi.usherb.ca/results2012">2012 DATASET RESULTS</a>
+								<a href="http://wordpress-jodoin.dmi.usherb.ca/results2014">2014 DATASET RESULTS</a>
+							</div>
+						</li>
+						<li id="layer1" class="page_item "><a href="http://wordpress-jodoin.dmi.usherb.ca/#" title="Dataset" onmouseover="mopen(&#39;m2&#39;)" onmouseout="mclosetime()">Datasets</a>
+							<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+								<a href="http://wordpress-jodoin.dmi.usherb.ca/datasetOverview">OVERVIEW</a>
+								<a href="http://wordpress-jodoin.dmi.usherb.ca/dataset2012">2012 DATASET</a>
+								<a href="http://wordpress-jodoin.dmi.usherb.ca/dataset2014">2014 DATASET</a>
+							</div>
+						</li>
+						<li id="layer1" class="page_item "><a href="http://wordpress-jodoin.dmi.usherb.ca/code" title="Code">Utilities</a></li>
+						<li id="layer1" class="page_item "><a href="http://wordpress-jodoin.dmi.usherb.ca/#" title="Upload" onmouseover="mopen(&#39;m3&#39;)" onmouseout="mclosetime()">Upload</a>
+							<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="visibility: hidden;">
+								<a href="http://wordpress-jodoin.dmi.usherb.ca/upload2012">Upload for 2012 DATASET</a>
+								<a href="http://wordpress-jodoin.dmi.usherb.ca/upload2014">Upload for 2014 DATASET</a>
+							</div>
+						</li>
+						<li id="layer1" class="page_item "><a href="http://wordpress-jodoin.dmi.usherb.ca/cdw2012" title="CDW2012">CDW-2012</a></li>
+						<li id="layer1" class="page_item " style="background-color:red;font color:yellow;"><a href="http://wordpress-jodoin.dmi.usherb.ca/cdw2014" title="CDW2014">CDW-2014</a></li>
+					</ul>
+				</div>
+				<div id="content">
+					
+<div align="left"> 
+<img src="./ChangeDetectionBanner.jpg" align="left" title="2012 CVPR Workshop : Motion and Change Detection Challenge">
+</div>
+
+<div style="clear:both;"></div>
+<br>
+<p>The identification of changing or moving areas in the field of view of a camera is a fundamental pre-processing step in computer vision and video processing. Example applications include visual surveillance (e.g., people counting, action recognition, anomaly detection, post-event forensics), smart environments (e.g., room occupancy monitoring, fall detection, parking occupancy detection), and video retrieval (e.g., activity localization and tracking). Although subsequent processing may be different in each case, typically one has to start with the identification of regions of interest which, in the case of video, are either short-term changes, i.e., video dynamics (motion), or long-term changes, i.e., appearing/disappearing objects and structural changes. Clearly, motion and change detection are only pre-processing steps for subsequent tracking, classification, or estimation, albeit important ones.</p>
+
+<p>To date, many motion and change detection algorithms have been developed that perform well in some types of videos, but most are sensitive to sudden illumination changes, environmental conditions (night, rain, snow, air turbulence), background/camera motion, shadows, and camouflage effects (photometric similarity of object and background). There is no single algorithm today that seems to be able to simultaneously address all the key challenges that accompany real-world (non-synthetic) videos. In fact, no single, realistic, large-scale dataset exists that covers a range of challenges present in the real world and includes accurate ground truths.</p>
+
+<font color="red"><p><b>This website encapsulates a rigorous and comprehensive academic benchmarking effort for testing and ranking existing and new algorithms for change and motion detection. It will be revised/expanded from time to time based on received feedback, and will maintain a comprehensive ranking of submitted methods for years to come.</b></p></font>
+
+<h4>Datasets</h4>
+
+<p>Two datasets are available: <a href="http://wordpress-jodoin.dmi.usherb.ca/dataset2012" target="_blank">2012 DATASET</a> and <a href="http://wordpress-jodoin.dmi.usherb.ca/dataset2014" target="_blank">2014 DATASET</a>. Both provide a realistic, camera-captured (no CGI), diverse set of videos. They have been selected to cover a wide range of detection challenges and are representative of typical indoor and outdoor visual data captured today in surveillance, smart environment, and video database scenarios. The <a href="http://wordpress-jodoin.dmi.usherb.ca/dataset2012" target="_blank">2012 DATASET</a>  includes the following challenges: dynamic background, camera jitter, intermittent object motion, shadows and thermal signatures. The <a href="http://wordpress-jodoin.dmi.usherb.ca/dataset2014" target="_blank">2014 DATASET</a>  includes all the 2012 videos plus additional ones with the following difficulties: challenging weather, low frame-rate, acquisition at night, PTZ capture and air turbulence. Each dataset is accompanied by accurate ground-truth segmentation and annotation of change/motion areas for each video frame. Please see the <a href="http://wordpress-jodoin.dmi.usherb.ca/datasetOverview" target="_blank">OVERVIEW</a>  of the dataset for a detailed description of included video categories and examples of ground truth.</p>
+
+<h4>Performance evaluation</h4>
+
+<p>In addition to providing a fine-grained and accurate annotation of videos, we also provide tools to compute performance metrics and thus identify algorithms that are robust across various challenges. The source code to compute all performance metrics is provided in <a href="http://wordpress-jodoin.dmi.usherb.ca/code" target="_blank">UTILITIES</a>. These metrics are reported under the RESULTS tab separately for each dataset. Details of evaluation methodology and specific metrics used can be found in <a href="http://wordpress-jodoin.dmi.usherb.ca/resultEvaluation" target="_blank">EVALUATION</a> under the RESULTS tab.</p>
+
+<h4>Participation</h4>
+
+<p>Researchers from both academia and industry are invited to test their change and motion detection algorithms on one or both datasets, and to report their methodology and results (please read the rules and instructions below). Results from all submissions that meet certain minimum quality standards will be reported and maintained on this website. </p>
+
+<p>Instructions for prospective participants:</p>
+<ul>
+	<li>The <a href="http://wordpress-jodoin.dmi.usherb.ca/dataset2012" target="_blank">2012 DATASET</a> and <a href="http://wordpress-jodoin.dmi.usherb.ca/dataset2014" target="_blank">2014 DATASET</a> contain several video categories with 4 to 6 video sequences in each category. Results can be reported for one, multiple, or all video categories however in any one category results must be reported for all sequences in that category.</li>
+	<li>Only one set of tuning parameters should be used for all videos.</li>
+	<li>Numerical scores can be computed using Matlab or Python programs available in <a href="http://wordpress-jodoin.dmi.usherb.ca/code" target="_blank">UTILITIES</a>. Both programs take the output produced by an algorithm, the ground truth, and a region-of-interest mask  (see <a href="http://wordpress-jodoin.dmi.usherb.ca/datasetOverview" target="_blank">OVERVIEW</a>  under the DATASETS tab) and compute performance metrics described in <a href="http://wordpress-jodoin.dmi.usherb.ca/resultEvaluation" target="_blank">EVALUATION</a> under the RESULTS tab.</li>
+	<li>In order for a method to be ranked on this website, upload your results via the <a href="http://wordpress-jodoin.dmi.usherb.ca/upload2012" target="_blank">UPLOAD FOR 2012 DATASET</a> and <a href="http://wordpress-jodoin.dmi.usherb.ca/upload2014" target="_blank">UPLOAD FOR 2014 DATASET</a> page.</li>
+	<li>If you use this facility to test and report results in any publication, we request that you <b>acknowledge this website (www.changedetection.net) and cite the following overview paper</b> (see <a href="http://wordpress-jodoin.dmi.usherb.ca/cdw2012" target="_blank">CDW-2012</a> page) that summarizes the dataset, performance evaluation metrics, and the results and findings for 19 state-of-the-art methods:</li>
+	<ul>
+		<li><b>N. Goyette, P.-M. Jodoin, F. Porikli, J. Konrad, and P. Ishwar, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6238919" target="_blank">changedetection.net: A new change detection benchmark dataset</a>, in Proc. IEEE Workshop on Change Detection (CDW-2012) at CVPR-2012, Providence, RI, 16-21 Jun., 2012.</b></li>
+	</ul>
+</ul>
+
+<h4>Organizers</h4>
+
+<div style="float: left; width: 50%; text-align:left"> 
+	<ul>
+		<li><b>Pierre-Marc Jodoin</b> (Université de Sherbrooke), <a href="mailto:pierre-marc.jodoin@usherbrooke.ca">pierre-marc.jodoin@usherbrooke.ca</a></li>
+		<li><b>Janusz Konrad</b> (Boston University), <a href="mailto:jkonrad@bu.edu">jkonrad@bu.edu</a></li>
+	</ul>
+</div>
+
+<div style="float: left; width: 50%; text-align:left"> 
+	<ul>
+		<li><b>Prakash Ishwar</b> (Boston University), <a href="mailto:pi@bu.edu">pi@bu.edu</a></li>
+		<li><b>Fatih Porikli</b> (ANU/NICTA), <a href="mailto:fatih.porikli@anu.edu.au">fatih.porikli@anu.edu.au </a></li>
+	</ul>
+</div>
+
+<div style="clear:both;"></div>
+
+<h4>Acknowledgment</h4>
+<p>The 2012 dataset, original website and utilities associated with this benchmarking facility wound not have materialized without the tireless efforts of Masters student Nil Goyette at Université de Sherbrooke who has given his heart and soul to this marathon undertaking. We would also like to recognize the following individuals for their contributions to this effort:</p>
+
+<div style="float: left; width: 50%; text-align:left">
+	<ul>
+		<li><b>Yi Wang</b>, University of Sherbrooke, Canada<br>
+			<i>Webmaster, software developer, captured footage, helped with ground truthing</i></li>
+		<li><b>Nil Goyette</b>, University of Sherbrooke, Canada<br>
+			<i>Former webmaster, software developer, captured footage, helped with ground truthing</i></li>
+		<li><b>Yannick Bénézeth</b>, Université de Bourgogne, France<br>
+			<i>Provided video footage, helped with ground truth</i></li>
+		<li><b>Dotan Asselmann</b>, Tel Aviv University, Israel<br>
+			<i>Provided every video in the Turbulence category, helped with ground truthing</i></li>
+	</ul>
+</div>
+<div style="float: left; width: 50%; text-align:left">
+	<ul>
+		<li><b>Shaozi Li</b>, <b>Weiyuan Zhuang</b>, and <b>Yaping You</b>, University of Xiamen, China<br>
+			<i>Helped with ground truthing</i></li>
+
+		<li><b>Luke Sorenson</b> and <b>Lucas Liang</b>, Boston University, USA<br>
+			<i>Helped with ground truthing</i></li>
+
+		<li><b>Marc Vandroogenbroeck</b>, Université de Liège, Belgium<br>
+			<i>Provided video footage</i></li>
+
+		<li><b>Oognet.pl</b>, ul. Inżynierska 403-422 Warszawa, Poland<br>
+			<i>Provided video footage</i></li>
+	</ul>
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+	
+</body></html>

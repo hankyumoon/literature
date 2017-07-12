@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://vlg.cs.dartmouth.edu/c3d/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>C3D: Generic Features for Video Analysis</title>
+  </head>
+  <body>
+    <h2>C3D: Generic Features for Video Analysis</h2>
+    <p><a title="Du Tran" href="http://www.cs.dartmouth.edu/~dutran">Du Tran</a>,
+      <a title="Lubomir Bourdev" href="http://www.cs.berkeley.edu/~lbourdev">Lubomir
+        Bourdev</a>, <a title="Rob Fergus" href="http://cs.nyu.edu/~fergus">Rob
+        Fergus</a>, <a title="Lorenzo Torresani" href="http://www.cs.dartmouth.edu/~lorenzo">Lorenzo
+        Torresani</a>, <a title="Manohar Paluri" href="https://sites.google.com/site/balamanohar/Home">Manohar
+        Paluri</a></p>
+    <br>
+    C3D is a modified version of <a target="_blank" title="BVLC Caffe" href="http://caffe.berkeleyvision.org/">BVLC
+      caffe</a> [2] to support 3-Dimensional Convolutional Networks. C3D can be
+    used to train, test, or fine-tune 3D ConvNets efficiently. We also provide
+    our C3D pre-trained model which were trained on Sports-1M dataset [3] with
+    necessary tools for extract video features.<br>
+    <h4>Demos</h4>
+    <p>Sport classification using C3D on Sports-1M dataset. Video frames are
+      visualized with top 2 predictions.</p>
+    <iframe src="./C3D_ Generic Features for Video Analysis_files/LslfD4V_bMs.html" width="480" height="270" frameborder="0" allowfullscreen=""></iframe>
+    <iframe src="./C3D_ Generic Features for Video Analysis_files/zT-cd4vrZfA.html" width="480" height="270" frameborder="0" allowfullscreen=""></iframe>
+    <h4>Downloads</h4>
+    <ul>
+<li>03/01/2017: <font color="red">New code and model is released (check out at git hub).</font> Paper/techincal report will be availble soon.</li>
+      <li>Source code: <a target="_blank" title="Code on Github" href="https://github.com/facebook/C3D">github</a>
+        (we branched out from BVLC caffe on July 17, 2014 with gist_id <a href="https://github.com/BVLC/caffe/tree/b80fc862952ba4e068cf74acc0823785ce1cc0e9"><code>b80fc86</code></a>.
+        Following normal caffe installation should work).</li>
+      <li>Pre-trained model:&nbsp;<a target="_blank" title="sport1m" href="https://www.dropbox.com/s/vr8ckp0pxgbldhs/conv3d_deepnetA_sport1m_iter_1900000?dl=0">sport1m</a> (alternative <a target="_blank" title="GooleDrive link" href="https://drive.google.com/open?id=0Bx-2rTokRAt1Vm9nLWItQTgtSVE">url1</a> or <a href="http://vlg.cs.dartmouth.edu/c3d/conv3d_deepnetA_sport1m_iter_1900000">url2</a>). For full reference of the model, please refer to [1]. For a quick
+        reference, please refer to the table below where we report accuracy of
+        this model C3D with fc6 feature and linear SVM.</li>
+      <p> </p>
+      <table style="width: 710px; height: 74px;" border="1">
+        <tbody>
+          <tr>
+            <td style="text-align: left; width: 135.7px;"><strong>&nbsp;Dataset</strong></td>
+            <td style="text-align: center; width: 114.717px;"><strong>UCF101</strong></td>
+            <td style="text-align: center; width: 108.633px;"><strong>ASLAN</strong><strong><br>
+              </strong></td>
+            <td style="text-align: center; width: 96.5663px;"><strong>UMD-Scene</strong></td>
+            <td style="text-align: center; width: 120.017px;"><strong>YUPENN-Scene</strong></td>
+            <td style="text-align: center; width: 94.3667px;"><strong>Object</strong></td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">&nbsp;C3D + linear SVM</td>
+            <td style="text-align: center;">82.3</td>
+            <td style="text-align: center;">78.3 (86.5)</td>
+            <td style="text-align: center;">87.7</td>
+            <td style="text-align: center;">98.1</td>
+            <td style="text-align: center;">22.3</td>
+          </tr>
+        </tbody>
+      </table>
+    </ul>
+    <h4>Usage</h4>
+    <ul>
+      <li><a href="https://goo.gl/k2SnLY">C3D User Guide</a>.</li> </ul>
+    <h4>Supports</h4>
+    <p>This project is supported by:</p>
+    <a href="https://research.facebook.com/ai"><img longdesc="Facebook AI Research" title="FAIR" alt="Facebook AI Research" src="./C3D_ Generic Features for Video Analysis_files/fair.png" width="120" height="120"></a>
+    <a href="http://vlg.cs.dartmouth.edu/vlg.html"><img longdesc="Visual Learning Group" title="VLG" alt="Visual Learning Group" src="./C3D_ Generic Features for Video Analysis_files/vlg.png" width="120" height="120"></a>
+    <ul>
+    </ul>
+    <h4>Citation</h4>
+    <p>If you find C3D helpful for your research, please cite the following
+      papers:</p>
+    <ul>
+    </ul>
+    <ol>
+      <li>D. Tran, L. Bourdev, R. Fergus, L. Torresani, and M. Paluri, <em><strong>Learning Spatiotemporal Features with 3D Convolutional Networks</strong></em>, ICCV 2015, <a href="http://vlg.cs.dartmouth.edu/c3d/c3d_video.pdf">PDF</a>.</li>
+      <li> Y. Jia, E. Shelhamer, J. Donahue, S. Karayev, J. Long, R. Girshick,
+        S. Guadarrama, and T. Darrell, <strong><em>Caffe: Convolutional
+            Architecture for Fast Feature Embedding</em></strong>, arXiv 2014.</li>
+      <li>A. Karpathy, G. Toderici, S. Shetty, T. Leung, R. Sukthankar, and L.
+        Fei-Fei, <em><strong>Large-scale Video Classification with
+            Convolutional Neural Networks</strong></em>, CVPR 2014.</li>
+    </ol>
+    <ul>
+    </ul>
+    <p><strong>Need further helps</strong>? Email me: trandu -at- fb.com or post <a target="_blank" title="report issues" href="https://github.com/facebook/C3D/issues">here</a>.</p>
+
+
+
+</body></html>
