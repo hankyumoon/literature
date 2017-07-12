@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)http://techtalks.tv/talks/stacked-convolutional-independent-subspace-analysis-for-action-recognition/54229/ -->
+<html class=" js no-flexbox flexbox-legacy canvas canvastext no-webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="robots" content="FOLLOW,INDEX">
+    <meta name="google-site-verification" content="lAeEVyQIlyiHkJqfHuuNIRJRMNalybGmyY5JWKLD7e4">
+
+    <link rel="shortcut icon" href="http://techtalks.tv/site_media/static/img/favicon.ico" type="favicon.ico">
+
+    
+    <title>Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv</title>
+    
+    <meta name="description" content="TechTalks.tv is making it super-easy to publish, search and learn from slide-based videos, all in order to share educational content on the web.">
+    <meta name="keywords" content="Video Education, Video Conference, Watch Event live, learn form videos, super-easy to publish, slide-based videos, education on the web, Free videos, Free education.">
+
+    <meta name="author" content="TechTalks.Tv - office@techtalks.tv">
+    <meta name="author" content="Design by: Jovan Stojanovic - www.jovanstojanovic.com">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Css styles -->
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/normalize.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/global.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/buttons.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/flexslider.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/pagespecific.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/form.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/plugins.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/dashboard.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/slides-0.1.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/store.css">
+    <link rel="stylesheet" href="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/transcribe.css">
+
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Rajnish comment -->
+    <script async="" src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/analytics.js"></script><script type="text/javascript" async="" src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/ga.js"></script><script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/jquery.min.js"></script>
+
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/jquery-1.7.1.js"></script>
+    <script>window.jQuery || document.write('<script src="/site_media/static/js/jquery-1.7.1.js"><\/script>')</script>
+
+    
+<script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/flowplayer-3.2.6.min.js"></script>
+
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-9517976-19']);/* UA-9517976-19 */
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+        <!-- javascript to refresh qna part -->
+
+<style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style></head>
+
+<body class="watch_page">
+    
+    <div class="clearfix top_holder">
+    <div class="clearfix top_header">
+        <h1 class="logo"><a href="http://techtalks.tv/">TechTalks.Tv</a></h1>
+        <ul id="top_nav" class="top_nav">
+            <li>
+                <ul id="nav" class="nav">
+                    <li><a href="http://techtalks.tv/events/live/">Webcasts</a></li>
+                    <li><a href="http://techtalks.tv/events/">Events</a></li>
+                    <!--
+                    <li class="explore">
+                        <a href="javascript:void(0);">Explore</a>
+                        <ul class="drop_nav">
+                            <li>Browse by:</li>
+                            <li><a href="/events/">Events</a></li>
+                        <li><a href="/talks/">Recently uploaded</a></li>
+                        <li><a href="/events/upcoming/">Upcoming</a></li>
+                        </ul>
+                    </li>
+                    -->
+                    <li class="search">
+                        
+                            
+                            <form id="search" action="http://techtalks.tv/search/results/" method="get">
+    <input type="search" name="q" value="" placeholder="Enter Keywords">
+    <input data-inline="true" type="submit" value="Search" class="search_button">
+</form>
+ 
+                        
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="small_login_no">New to TechTalks.tv? <a id="tt_create_account" href="javascript:void(0);">Sign up</a> <span>or </span></li>
+            <li class="login_holder">
+                <a id="tt_login" class="tt_login" href="javascript:void(0);">Login</a>.
+                <div class="login_form">
+    <div class="arrow_login"></div>
+    <div class="login_content">
+        <form method="POST" action="http://techtalks.tv/account/login/"> <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="c11a3834847aa8c44669531e4cef6c7b"></div>
+            <fieldset class="login_top">
+                <label for="id_email">Email:</label>
+                <input id="id_email" name="email" type="text" placeholder="enter your email">
+                <label for="id_password">Password:</label>
+                <input id="id_password" name="password" type="password" placeholder="enter your password">
+                <a href="javascript:void(0);" class="forgotPass">Forgot password?</a>
+                <input name="submit" type="submit" value="Continue" class="login_submit">
+            </fieldset>
+
+        </form>
+        <form method="POST" action="http://techtalks.tv/account/password_reset/"> <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="c11a3834847aa8c44669531e4cef6c7b"></div>
+           <fieldset class="forgot_top" style="display: none;">
+                <label for="id_email">Email:</label>
+                <input id="id_email" name="email" type="text" placeholder="enter your email">
+                <span>Enter your email for us to reset your old password and send you a new one.</span>
+                <input name="submit" type="submit" value="Send" class="forgot_submit">
+            </fieldset>
+        </form>
+    </div>
+</div>
+            </li>
+            
+        </ul>
+    </div>
+</div> <!--! end of top_holder -->
+    <header>
+        <div class="clearfix header_holder">
+            <h1 class="channel_logo">
+                
+                <!--<a href="/events/56/"> -->
+                  <a href="http://techtalks.tv/ieee-cvpr-2011/">
+                  
+                      <img src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/cvpr2011thumb.jpg" alt="Stacked Convolutional Independent Subspace Analysis for Action Recognition">
+                  
+                
+                </a>
+                <span><font color="white">Channel</font></span>
+            </h1>
+            <h2 class="title">Stacked Convolutional Independent Subspace Analysis for Action Recognition</h2>
+            <ul id="watch_nav" class="watch_nav">
+                <li class="authors">Quoc Le (Stanford University); Will Zou (Stanford University ); Serena Yeung (Stanford University); Andrew Ng (Stanford Universi</li>
+            </ul>
+        </div>
+    </header> <!--! end of header -->
+
+
+    
+
+<!--
+ 
+-->
+
+ 
+
+   <div class="video_and_tags">
+    <div class="video_holder">
+    
+    <!-- <div class="user_options">
+            <ul>
+                <li><a href="javascript:void(0);" class="watch_later">Later</a></li>
+                <li><a href="javascript:void(0);" class="playlist">Playlist</a></li>
+                <li><a href="javascript:void(0);" class="favorite">Fav</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="user_opt"></a>
+        </div> -->
+        
+        <div id="videoplayer">
+          <!--
+            <embed src="/site_media/static/swf/weyplayerplus.swf" width="100%" height="480px" allowscriptaccess="always" allowfullscreen="true" id="swfContent" name="swfContent" flashvars="talkURL=rtmp://64.16.214.85:1935/vod/edited/488_0001.flv&slideURL=rtmp://64.16.214.85:1935/vod/edited/487_0001.flv&talkID=54229&startsFrom=0&endsAt=-1&slideViewPosition=Right"/></embed>
+          -->
+          <div id="sideview_videoplayer_div" class="sideview_videoplayer_div">
+            <a class="presenter" href="http://techtalks.tv/talks/stacked-convolutional-independent-subspace-analysis-for-action-recognition/54229/edited/488_0001.flv" id="flowplayer_presenter"><object width="100%" height="100%" id="flowplayer_presenter_api" data="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/flowplayer.commercial-3.2.7.swf.download" type="application/x-shockwave-flash"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="quality" value="high"><param name="cachebusting" value="false"><param name="bgcolor" value="#000000"><param name="flashvars" value="config={&quot;key&quot;:&quot;#$e6dbb014a27ff12b879&quot;,&quot;clip&quot;:{&quot;scaling&quot;:&quot;fit&quot;,&quot;provider&quot;:&quot;rtmp&quot;,&quot;url&quot;:&quot;edited/488_0001.flv&quot;},&quot;plugins&quot;:{&quot;rtmp&quot;:{&quot;url&quot;:&quot;/site_media/static/flowplayer/flowplayer.rtmp-3.2.3.swf&quot;,&quot;netConnectionUrl&quot;:&quot;rtmp://64.16.214.85:1935/vod&quot;}},&quot;playerId&quot;:&quot;flowplayer_presenter&quot;,&quot;playlist&quot;:[{&quot;scaling&quot;:&quot;fit&quot;,&quot;provider&quot;:&quot;rtmp&quot;,&quot;url&quot;:&quot;edited/488_0001.flv&quot;}]}"></object></a>
+            <a class="slides" href="http://techtalks.tv/talks/stacked-convolutional-independent-subspace-analysis-for-action-recognition/54229/edited/487_0001.flv" id="flowplayer_slides"><object width="100%" height="100%" id="flowplayer_slides_api" data="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/flowplayer.commercial-3.2.7.swf.download" type="application/x-shockwave-flash"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="quality" value="high"><param name="cachebusting" value="false"><param name="bgcolor" value="#000000"><param name="flashvars" value="config={&quot;key&quot;:&quot;#$e6dbb014a27ff12b879&quot;,&quot;clip&quot;:{&quot;scaling&quot;:&quot;fit&quot;,&quot;provider&quot;:&quot;rtmp&quot;,&quot;url&quot;:&quot;edited/487_0001.flv&quot;},&quot;plugins&quot;:{&quot;rtmp&quot;:{&quot;url&quot;:&quot;/site_media/static/flowplayer/flowplayer.rtmp-3.2.3.swf&quot;,&quot;netConnectionUrl&quot;:&quot;rtmp://64.16.214.85:1935/vod&quot;},&quot;controls&quot;:{&quot;all&quot;:false,&quot;scrubber&quot;:false}},&quot;playerId&quot;:&quot;flowplayer_slides&quot;,&quot;playlist&quot;:[{&quot;scaling&quot;:&quot;fit&quot;,&quot;provider&quot;:&quot;rtmp&quot;,&quot;url&quot;:&quot;edited/487_0001.flv&quot;}]}"></object></a>
+          </div>
+          <br clear="all">
+          <script type="text/javascript">
+            $f("a.presenter", "/site_media/static/flowplayer/flowplayer.commercial-3.2.7.swf", {
+              key: '#$e6dbb014a27ff12b879',
+              clip: {
+                scaling : 'fit',
+                
+                provider: 'rtmp'
+              },
+              plugins: {
+                rtmp: {
+                  url: '/site_media/static/flowplayer/flowplayer.rtmp-3.2.3.swf',
+                  netConnectionUrl: 'rtmp://64.16.214.85:1935/vod'
+                }
+              },
+
+            });
+            $f("a.slides", "/site_media/static/flowplayer/flowplayer.commercial-3.2.7.swf", {
+              key: '#$e6dbb014a27ff12b879',
+              clip: {
+                scaling : 'fit',
+                provider: 'rtmp',
+                
+                onStart: function () {
+                  this.setVolume(0);
+                }
+              },
+              plugins: {
+                rtmp: {
+                  url: '/site_media/static/flowplayer/flowplayer.rtmp-3.2.3.swf',
+                  netConnectionUrl: 'rtmp://64.16.214.85:1935/vod'
+                },
+                controls:  {
+                  all: false,
+                  scrubber: false,
+                },
+              },
+            });
+          </script>
+        </div>
+        
+    </div>
+
+
+    
+  </div>
+    <div id="content" class="content">
+    <ul class="clearfix video_nav">
+        <li class="upload_link">
+            <a href="http://techtalks.tv/upload/video/channel/0/event/0/talk/54229/" class="upload">Upload Video</a>
+            <span>videos in mp4/mov/flv</span>
+            <div id="upload_holder" class="upload_holder">
+                <a class="watch_close" href="http://techtalks.tv/upload/video/channel/0/event/0/talk/54229/">close</a>
+                <div class="tooltip_watch_content">
+                    <h3>Upload video</h3>
+                    <span>Note: publisher must agree to add uploaded document</span>
+                    <form>
+                        <input type="file" name="" value="">
+                    </form>
+                </div>
+                <div class="upload_arrow"></div>
+            </div>
+        </li>
+        <!--
+        <li class="upload_link" >
+            <a href="/upload/consent/channel/0/event/0/talk/54229/" class="upload">Upload Consent</a>
+            <span>consent form in PDF/JPEG</span>
+            <div id="upload_holder" class="upload_holder">
+                <a class="watch_close" href="/upload/consent/channel/0/event/0/talk/54229/">close</a>
+                <div class="tooltip_watch_content">
+                    <h3>Upload Consent</h3>
+                    <span>Note: publisher must agree to add uploaded document</span>
+                    <form>
+                        <input type="file" name="" value="" />
+                    </form>
+                </div>
+                <div class="upload_arrow"></div>
+            </div>
+        </li>
+        -->
+      
+        <li class="upload_link">
+            <a href="http://techtalks.tv/upload/slides/channel/0/event/0/talk/54229/" class="upload">Upload Slides</a>
+            <span>slides or other attachment</span>
+            <div id="upload_holder" class="upload_holder">
+                  <a class="watch_close" href="http://techtalks.tv/upload/slides/channel/0/event/0/talk/54229/">close</a>
+                <div class="tooltip_watch_content">
+                    <h3>Upload Slides</h3>
+                    <span>Note: publisher must agree to add uploaded document</span>
+                    <form>
+                        <input type="file" name="" value="">
+                    </form>
+                </div>
+                <div class="upload_arrow"></div>
+            </div>
+        </li>
+        
+        
+        <li class="share_holder_link">
+            <a href="javascript:void(0);" class="share_video">Share this</a>
+            <span>twitter - facebook - google +</span>
+            <ul id="share_holder" class="share_holder_watch">
+                <li class="share_arrow"></li>
+                <li class="share_twitter">
+                    <a target="_blank" href="http://twitter.com/home?status=I%27m%20watching%20Stacked%20Convolutional%20Independent%20Subspace%20Analysis%20for%20Action%20Recognition%20@TechTalksTV+techtalks.tv/talks/stacked-convolutional-independent-subspace-analysis-for-action-recognition/54229/">Twitter</a>
+                </li>
+                <li class="share_facebook">
+                    <a name="fb_share" type="icon" share_url="techtalks.tv">Facebook</a>
+                </li>
+                <li class="share_googleplus">
+                    <a href="javascript:(function(){ var w=480;var h=380;var x=Number((window.screen.width-w)/2); var y=Number((window.screen.height-h)/2);window.open(&#39;https://plusone.google.com/_/+1/confirm?hl=en&amp;url=&#39;+encodeURIComponent(&#39;&#39;)+&#39;&amp;title=&#39;+encodeURIComponent(&#39;&#39;),&#39;&#39;,&#39;width=&#39;+w+&#39;,height=&#39;+h+&#39;,left=&#39;+x+&#39;,top=&#39;+y+&#39;,scrollbars=no&#39;);})();"></a>
+                </li>
+            </ul>
+        </li>
+        <li class="feedback_link">
+            <a href="javascript:void(0);" class="feedback">Feedback</a>
+            <span>help us improve</span>
+            <div id="feedback_holder" class="feedback_holder">
+                <div class="feedback_arrow"></div>
+                <a class="watch_close" href="javascript:void(0);">close</a>
+                <div class="tooltip_watch_content">
+                    <h3>Feedback</h3>
+                    <span>Please help us improve your experience by sending us a comment, question or concern</span>
+                    <form method="post" action="http://techtalks.tv/suggestions/talk/ajax/54229/"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="c11a3834847aa8c44669531e4cef6c7b"></div>
+                        <label for="complain_note">Message: </label>
+                        <textarea id="complain_note" name="complain_note"></textarea>
+                        <input name="send" type="submit" value="Send message" class="submit_message">
+                    </form>
+                </div>
+                <div class="upload_arrow"></div>
+            </div>
+        </li>
+    </ul>
+    <div id="main" role="main" class="main">
+      
+        	Please help transcribe this video using our simple transcription tool. You need to be logged in to do so. 
+        	<button onclick="window.location=&#39;/talks/stacked-convolutional-independent-subspace-analysis-for-action-recognition/54229/transcribe/&#39;"> Transcribe </button>
+        
+      <div class="left_content">
+        
+        
+          <h2>Questions and Answers </h2>
+          
+          <strong>You need to be logged in to be able to post here.</strong>
+          
+              <div style="float:left; width:100%;">
+                  <!--
+                  <div id="fb-root"></div>
+                  <script src="http://connect.facebook.net/en_US/all.js#appId=108700495883667&amp;xfbml=1"></script>
+                  <fb:live-stream event_app_id="108700495883667" width="560" height="300" xid="54229" always_post_to_friends="false"></fb:live-stream>
+                  -->
+                  <div class="qna_holder" id="qna_div">
+	<div id="qna_div_back"></div>
+	<ul class="forms_ui">
+		<li class="forms_item">
+			<!-- New Question -->
+			<div id="new_question" class="new_question">
+				<form action="http://techtalks.tv/qna/post_question_ajax/428/" method="post" id="post_question_form" class="qna_post_form">
+					<div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="c11a3834847aa8c44669531e4cef6c7b"></div>
+					<label for="input_question_428">Post a new question</label>
+					<textarea type="text" id="input_question_428" name="message" placeholder="What&#39;s your question?" class="new_question_textarea"></textarea>
+					<input id="submit_post_question_form" type="submit" value="Submit" class="login_submit">
+				</form>
+			</div>
+		</li>
+		
+		<input type="hidden" id="last_time_checked" value="1494460720">
+	</ul>
+</div>
+              </div>
+        
+        </div>
+        <div class="right_content">
+            <div class="ad_container" style="display: none;">
+    ADS
+</div>
+        </div> <!--! end of .right_content -->
+    </div> <!--! end of #main -->
+    <div class="clearfix"></div>
+</div>
+
+
+  <br>
+
+  
+
+
+
+    <div id="footer">
+        <footer>
+            <div class="footer_holder">
+                <ul class="footer_links">
+                    <li class="foot_title"><h5>What is TechTalks.tv?</h5></li>
+                    <li><a href="http://techtalks.tv/about/">About Us</a></li>
+                    <li><a href="http://techtalks.tv/about/contact/">Contact</a></li>
+                </ul>
+
+                <ul class="footer_links">
+                    <li class="foot_title"><h5>Explore</h5></li>
+                    <li><a href="http://techtalks.tv/events/">Events</a></li>
+                    <li><a href="http://techtalks.tv/talks/">Recently Uploaded</a></li>
+                    <li><a href="http://techtalks.tv/events/upcoming/">Upcoming</a></li>
+                </ul>
+
+                <ul class="footer_links">
+                    <li class="foot_title"><h5>Other Areas</h5></li>
+                    <!-- <li><a href="javascript:void(0);">Report a Bug</a></li>-->
+                    <li><a href="http://techtalks.tv/about/terms/">Terms of Use</a></li>
+                    <li><a href="http://techtalks.tv/about/privacy/">Privacy Policy</a></li>
+                    <li><a href="javascript:void(0);">Mobile Version <em>soon</em></a></li>
+                </ul>
+
+                <ul class="footer_links last">
+                    <li class="foot_title"><h5>Follow Us:</h5></li>
+                    <li class="twitter"><a href="https://twitter.com/#!/TechTalksTV">Twitter</a></li>
+                    <li class="facebook"><a href="http://www.facebook.com/pages/TechTalkstv/267150089990528">Facebook</a></li>
+                    <li class="googleplus"><a href="https://plus.google.com/113299546159957867157/posts">Google +</a></li>
+                    <li class="signup_newsletter">
+                        <form method="post" action="http://techtalks.tv/about/newsletter/signup/"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="c11a3834847aa8c44669531e4cef6c7b"></div>
+                            <label>Sign up below for our newsletter</label>
+                            <div class="signup_newsletter_back">
+                                <input type="text" name="email" id="email" placeholder="Enter Email" value="">
+                                <input type="submit" name="send" value="Send" class="newsletter_button">
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <p>Conference video proceedings are copyrighted by the corresponding conferences or authors unless noted otherwise.<br>
+                    © 2012. TechTalks.TV.  All rights reserved. </p>
+                <div class="clearfix"></div>
+            </div> <!--! end of footer_holder -->
+        </footer> <!--! end of footer -->
+        <div class="footer_border"></div>
+    </div>
+
+    <!-- /* PopUp for Create Account */ -->
+    <div class="background_black"></div>
+    <div id="createAccountPopup" class="createAccountPopup">
+        <a href="javascript:void(0);" class="close">close</a>
+        <form method="POST" action="http://techtalks.tv/account/signup/"> <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="c11a3834847aa8c44669531e4cef6c7b"></div>
+            <h2>Create a free account</h2>
+            <p>Once submitted, you will receive an email confirmation shortly.</p>
+            <fieldset class="account_top">
+                <label for="id_name">Name:</label>
+                <input id="id_name" name="name" type="text" placeholder="enter your name">
+                <label for="id_email">Email address</label>
+                <input id="id_email" name="email" type="text" placeholder="enter your email adress">
+            </fieldset>
+            <input type="hidden" id="id_username" default="None" class="textinput textInput" name="username" maxlength="30">
+            <fieldset class="account_pass_left">
+                <label for="id_password1">Password:</label>
+                <input id="id_password1" name="password1" type="password" placeholder="enter your password">
+            </fieldset>
+            <fieldset class="account_pass_right">
+                <label for="id_password2">Confirm Password:</label>
+                <input id="id_password2" name="password2" type="password" placeholder="repeat password">
+            </fieldset>
+            <label><input name="agree" type="checkbox" checked="checked">
+                I accept the <a href="http://techtalks.tv/about/terms/">Terms of Service</a> and <a href="http://techtalks.tv/about/privacy">Privacy Policy</a>.
+            </label>
+            <label><input name="newsletter" type="checkbox" checked="checked">
+                Send me the TechTalks.tv newsletter.
+            </label>
+            <input name="submit" type="submit" value="Continue" class="create_submit" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Sign Up&#39;, &#39;PopUp&#39;, &#39;New Member&#39;]);">
+            <!--
+            <fieldset class="social_account">
+                <h4>Sign In with your Twitter or Facebook account:</h4>
+                <a href="http://www.twitter.com"><img src="/site_media/static//img/signin_twitter.png" alt="SignIn with Twitter"/></a>
+                <a href="http://www.facebook.com"><img src="/site_media/static//img/signin_facebook.png" alt="SignIn with Facebook"/></a>
+            </fieldset>
+            -->
+        </form>
+    </div> <!--! end of createAccountPopup -->
+
+    <!-- AJAX File UPload javascript files -->
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/jquery-ui-1.8.14.custom.min.js"></script>
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/jquery.tmpl.min.js"></script>
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/jquery.iframe-transport.js"></script>
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/jquery.fileupload.js"></script>
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/jquery.fileupload-ui.js"></script>
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/application.js"></script>
+
+    <!-- JQuery UI slider -->
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/jquery-ui-1.8.18.custom.min.js"></script>
+
+    <!-- angular js and controller for taggining support -->
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/angular.min.js"> </script>
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/angular-resource.min.js"></script>
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/controllers.js"></script>
+    
+    <!-- Slideshow plugin -->
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/jquery-slides-0.1.js"></script>
+
+	<script type="text/javascript">
+
+	    $('.s_slideshow_preview_holder').slideshow({
+	        'videoSrc' : '',
+	        'hasThumbs': true,
+	        'hasFullScreen': true,
+	        'animationSpeed': '600',
+	        'sliderImages' : [
+	            
+	        ]
+	    });
+	</script>
+
+    <!-- scripts concatenated and minified via ant build script-->
+    <script type="text/javascript" src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/modernizr-2.5.3.min.js"></script>
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/plugins.js"></script>
+    <script src="./Stacked Convolutional Independent Subspace Analysis for Action Recognition - TechTalks.tv_files/script.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('.flexslider').flexslider();
+        });
+    </script>
+    <!-- Facebook share button -->
+    <!--Rajnish commented -->
+    <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+
+
+    <script type="text/javascript">var _kiq = _kiq || [];</script>
+    <!-- Rajnish commented 
+    <script type="text/javascript" src="//s3.amazonaws.com/ki.js/27068/5mE.js" async="true"></script>
+    -->
+
+    <!--[if lt IE 7 ]>
+        <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+        <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+    <![endif]-->
+
+    
+       <script type="text/javascript">
+        $.ajaxSetup ({
+          cache: false
+        });
+        function refresh_qna(){
+            new_url = "/qna/get_qnasession_ajax_html/428/";
+
+            $.get(
+              new_url,
+              {},
+              function(responseText){
+                //alert(responseText);
+                responseObject = jQuery.parseJSON(responseText);
+                // update QnA with the updated response
+                $("#qna_div").html('<p>'+responseObject.qnasessions[0].qnasession+'</p>');
+                // attach submit form listener again because new forms may be added
+                attachSubmitFormListener();
+                //jQuery("form.qna_post_form").submit( function(e) {
+                //   handlePostToQnA(e);
+                //});
+              },
+              "html"
+            );
+
+          //window.setTimeout("refresh_qna()", 60000);
+        }
+        function handlePostToQnA(e) {
+          e.preventDefault();
+          /* Show white background */
+          $('#qna_div_back').show();
+          var post_form = jQuery(e.target);
+          jQuery.ajax({
+            url: post_form.attr('action'),
+            type: post_form.attr('method'),
+            data: post_form.serialize(),
+            dataType: 'json',
+            success: function(json) {
+              refresh_qna();
+
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+              // TODO - log errors
+              //alert(xhr.responseText);
+              //alert(thrownError);
+            }
+          });
+        }
+        function attachSubmitFormListener() {
+            //alert('attaching form ajax listener');
+
+          // attach AJAX post handler for every qna_post_form
+          jQuery("form.qna_post_form").submit( function(e) {
+            //alert('calling to handle post using AJAX');
+             handlePostToQnA(e);
+          });
+        }
+        window.onload = attachSubmitFormListener;
+
+        //window.setTimeout("refresh_qna()", 60000);
+
+      </script>
+    
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67300769-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<div id="smallipop" style="opacity: 0;"><div class="sipContent"></div><div class="sipArrowBorder"></div><div class="sipArrow"></div></div></body></html>

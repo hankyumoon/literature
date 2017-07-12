@@ -1,0 +1,774 @@
+
+<!-- saved from url=(0075)http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Multiview Feature Learning Tutorial CVPR 2012</title>
+</head><body>
+
+<br><table border="0" cellspacing="0" cellpadding="10" width="100%" bgcolor="#FFFFF">
+<tbody>
+<tr>
+<td width="65%">
+<h1 style="font-family:verdana;color:#800000;text-align:center;">Multiview Feature Learning </h1><br>
+<h1 style="font-family:verdana;color:#800000;text-align:center;">Tutorial @ CVPR 2012</h1>
+<h2 style="font-family:verdana;color:#800000;text-align:center;">Saturday, June 16 2012, Providence</h2></td>
+
+<td width="35%"><img src="./Multiview Feature Learning Tutorial CVPR 2012_files/mv_features1.png"></td>
+</tr>
+</tbody>
+</table>
+
+<br>
+
+<table border="1" cellspacing="0" cellpadding="10" width="100%" bgcolor="#DDDDD">
+<tbody><tr>
+<td valign="TOP" bgcolor="#DDDDD">
+<table border="0" cellspacing="0" cellpadding="10" width="100%" bgcolor="#DDDDD">
+<tbody><tr>
+<td>
+<br>
+<br>
+<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/#description">content</a> <br>
+<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/#organizer">organizer</a> <br>
+<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/#materials">materials</a> <br>
+<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/#report">review paper</a> <br>
+<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/#outline">outline</a> <br>
+<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/#literature">literature</a> <br>
+<br>
+<br>
+</td></tr>
+
+</tbody></table>
+</td>
+<td>
+<table>
+<tbody><tr>
+<td>
+<a name="coursedescription">
+<h2 style="font-family:verdana;color:#404040;"> Course description </h2>
+In many vision tasks, good performance is all about the right representation. Learning of
+image features (AKA Sparse Coding, Dictionary Learning or Deep Learning) has therefore become a 
+common approach in tasks like object recognition. <br><br>
+Although feature learning works well on static images, 
+in a huge number of computer vision tasks, it is the <i>relationship between images </i> not the content of 
+any single image that carries the relevant information.
+Examples include motion and action understanding, stereo, geometry, invariant recognition or optic flow. <br><br>
+Recently, a variety of higher-order sparse coding models emerged, that try to learn codes 
+to represent relationships instead of just the content of single images. 
+Interestingly, some of these approaches quickly became some of best performing methods in 
+action and motion recognition tasks, and they are increasingly being deployed to model more difficult 
+capabilities, like learning invariances, tracking or modeling higher-level, analogical reasoning. 
+Most of these models were introduced independently and from various different
+perspectives, but they are all based on the same core idea: 
+Sparse codes can act like "gates",
+that modulate the connections between the other variables in the model. This allows them to
+dynamically represent changes inherent in an image sequence, turning model parameters into "stereo", "mapping" 
+or "spatio- temporal" features. Higher-order feature learning models are closely related to biological
+models of complex cells known as "energy models".<br><br>
+The tutorial will show how higher order features allow us to learn relations. It will
+discuss learning and inference methods and will present recent applications from various domains.
+The tutorial will also discuss in some detail the connections to biological models of complex cells 
+as well as to multi-layer feature learning and deep learning methods. <br><br>
+
+
+<h2 style="font-family:verdana;color:#404040"> Buzzwords </h2>
+Spatio-temporal features, 
+Deep Learning for Videos, 
+Energy models, 
+Complex Cells, 
+Square-Pooling,
+Quadrature Features,
+Bilinear Sparse Coding,  
+Conditional Sparse Coding, 
+Subspace Models, 
+Gated Boltzmann Machines, 
+mcRBM.
+<br>
+<br>
+
+</a><a name="report">
+<h2 style="font-family:verdana;color:#404040"> Review paper </h2>
+This </a><a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational.pdf">tech-report</a> is a summary of most of the topics discussed in the tutorial. <br><br>
+This <a href="http://icml.cc/2012/papers/105.pdf">shorter version</a> of the paper analyzes the role of shared eigenspaces and energy models.<br><br>
+
+
+<a name="materials">
+<h2 style="font-family:verdana;color:#404040"> Pointers to code </h2>
+</a>
+
+Python code for Factored Gated Boltzmann machines is available <a href="http://www-labs.iro.umontreal.ca/~memisevr/factored">here</a>.
+<br>
+<br>
+Python GPU implementation of Factored Gated Boltzmann machines, using joint training, <a href="http://www-labs.iro.umontreal.ca/~memisevr/morphbm">here</a>.
+<br>
+<br>
+Marc'Aurelio Ranzato made code available for his implementation of the <a href="http://www.cs.toronto.edu/~ranzato/publications/mcRBM/code/mcRBM_04May2010.zip">mean-covariance</a> model.
+<br>
+<br>
+Python/theano implementation of a gated autoencoder <a href="http://learning.cs.toronto.edu/~rfm/code/rae/index.html">here</a>.
+<br><br>
+
+<a name="outline">
+<h2 style="font-family:verdana;color:#404040;"> Schedule and Slides </h2>
+
+The tutorial will consist of four sections. Use the links below to download the slides. 
+Slides may change until the last minute.
+
+<br><br>
+Introduction [</a><a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/mvfl_part1.pdf">part 1</a>]<br>
+Multiview feature learning [<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/mvfl_part2.pdf">part 2</a>]<br>
+Factorization, complex cells, shared eigenspaces [<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/mvfl_part3.pdf">part 3</a>]<br>
+Applications, examples, conclusions [<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/mvfl_part3.pdf">part 4</a>]<br>
+<br>
+
+
+<table border="1" cellspacing="0" cellpadding="2" width="80%" bgcolor="#EEEEEE">
+<tbody><tr>
+<td width="40%">
+time and topic
+</td>
+<td width="40%">
+content
+</td>
+<td width="20%">
+slides
+</td>
+</tr>
+<tr>
+<td> 13:30 - 14:00 Introduction </td>
+<td> 
+    <ul>
+        <li> Feature Learning</li>
+        <li> Correspondence tasks in vision</li>
+        <li> From features to relational features </li>
+    </ul>
+</td>
+<td>
+[<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/mvfl_part1.pdf">part 1</a>]
+</td>
+</tr>
+<tr>
+<td> 14:00 - 15:00 Multiview feature learning</td>
+<td>
+    <ul>
+        <li> Brief sparse coding review</li>
+        <li> Learning relations and the need for multiplicative interactions</li>
+        <li> Bilinear models and gated sparse coding</li>
+        <li> Inference and learning with multiple views</li>
+    </ul>
+</td>
+<td>
+[<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/mvfl_part2.pdf">part 2</a>]
+</td>
+</tr>
+<tr>
+<td>15:00 - 15:30 Coffee break </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> 15:30 -16:30 Factorization, eigenspaces and complex cells</td>
+<td>
+    <ul>
+        <li> Parameter factorization and square pooling </li>
+        <li> Orthogonal warps and Quadrature Filters </li>
+        <li> Subspace and energy models </li>
+        <li> Learning more than two views </li>
+    </ul>
+</td>
+<td>
+[<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/mvfl_part3.pdf">part 3</a>]
+</td>
+</tr>
+<tr>
+<td> 16:30 - 17:00 Applications, tricks, outlook </td>
+<td>
+    <ul>
+        <li> Learning for action recognition </li>
+        <li> Learning for stereo inference</li>
+        <li> Learning invariant representations</li>
+        <li> Extensions, outlook </li>
+    </ul>
+</td>
+<td>
+[<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/mvfl_part4.pdf">part 4</a>]
+</td>
+</tr>
+</tbody></table>
+
+
+
+<a name="organizer">
+<h2 style="font-family:verdana;color:#404040"> Organizer </h2>
+</a><a href="http://learning.cs.toronto.edu/~rfm/">Roland Memisevic</a><br><br>
+<br>
+
+Roland Memisevic received the PhD in Computer Science from the University of Toronto, Canada, in 2008.
+He held positions as a research intern at Microsoft Research, Redmond, as a research scientist at 
+PNYLab LLC in Princeton, and as a post-doctoral fellow at the University of Toronto and at ETH Zurich, 
+Switzerland. In 2011, he joined the department of Computer Science, University of Frankfurt, Germany, 
+as an assistant professor in Computer Science. His research interests are in machine learning and 
+computer vision, in particular in unsupervised learning and feature learning. <br><br>
+
+
+<a name="literature">
+<h2 style="font-family:verdana;color:#404040;"> Relevant Literature </h2>
+</a>
+
+
+<!-- This part of the document was automatically generated with bibtex2html 1.95
+     (see http://www.lri.fr/~filliatr/bibtex2html/),
+     with the following command:
+     /usr/bin/bibtex2html -d relational.bib  -->
+
+
+
+<table>
+
+<tbody><tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="MappingsMalsburg1981">1</a>]
+</td>
+<td class="bibtexitem">
+Christoph von&nbsp;der Malsburg.
+ The correlation theory of brain function.
+ Internal report, 81-2, Max-Planck-Institut für Biophysikalische
+  Chemie, Postfach 2841, 3400 Göttingen, FRG, 1981.
+ Reprinted in E.&nbsp;Domany, J. L. van Hemmen, and K.&nbsp;Schulten, editors,
+  <em>Models of Neural Networks II</em>, chapter&nbsp;2, pages 95-119.
+  Springer-Verlag, Berlin, 1994.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#MappingsMalsburg1981">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="MappingsHinton1981">2</a>]
+</td>
+<td class="bibtexitem">
+Geoffrey&nbsp;F. Hinton.
+ A parallel computation that assigns canonical object-based frames of
+  reference.
+ In <em>Proceedings of the 7th international joint conference on
+  Artificial intelligence - Volume 2</em>, pages 683-685, San Francisco, CA, USA,
+  1981. Morgan Kaufmann Publishers Inc.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#MappingsHinton1981">bib</a>&nbsp;| 
+<a href="http://dl.acm.org/citation.cfm?id=1623264.1623282">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="adelson1985spatiotemporal">3</a>]
+</td>
+<td class="bibtexitem">
+E.H. Adelson and J.R. Bergen.
+ Spatiotemporal energy models for the perception of motion.
+ <em>J. Opt. Soc. Am. A</em>, 2(2):284-299, 1985.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#adelson1985spatiotemporal">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="Giles_higherorder">4</a>]
+</td>
+<td class="bibtexitem">
+C.&nbsp;Lee Giles and Tom Maxwell.
+ Learning, invariance, and generalization in high-order neural
+  networks.
+ <em>Appl. Opt.</em>, 26(23):4972-4978, December 1987.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#Giles_higherorder">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="sangerStereoGabor">5</a>]
+</td>
+<td class="bibtexitem">
+T.&nbsp;Sanger.
+ Stereo disparity computation using Gabor filters.
+ <em>Biological Cybernetics</em>, 59:405-418, 1988.
+ 10.1007/BF00336114.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#sangerStereoGabor">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="jepson1989fast">6</a>]
+</td>
+<td class="bibtexitem">
+A.D. Jepson and M.R.M. Jenkin.
+ The fast computation of disparity from phase differences.
+ In <em>Computer Vision and Pattern Recognition, 1989. Proceedings
+  CVPR'89., IEEE Computer Society Conference on</em>, pages 398-403. IEEE, 1989.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#jepson1989fast">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="ODF">7</a>]
+</td>
+<td class="bibtexitem">
+Izumi Ohzawa, Gregory&nbsp;C. Deangelis, and Ralph&nbsp;D. Freeman.
+ Stereoscopic Depth Discrimination in the Visual Cortex: Neurons
+  Ideally Suited as Disparity Detectors.
+ <em>Science (New York, N.Y.)</em>, 249(4972):1037-1041, August 1990.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#ODF">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="pi_sigma">8</a>]
+</td>
+<td class="bibtexitem">
+Yoan Shin and Joydeep Ghosh.
+ The pi-sigma network : An efficient higher-order neural network for
+  pattern classification and function approximation.
+ In <em>in Proceedings of the International Joint Conference on
+  Neural Networks</em>, pages 13-18, 1991.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#pi_sigma">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="foldiak">9</a>]
+</td>
+<td class="bibtexitem">
+Peter Foldiak.
+ Learning invariance from transformation sequences.
+ <em>Neural Computation</em>, 3(2):194-200, 1991.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#foldiak">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="QianStereoAndMotion">10</a>]
+</td>
+<td class="bibtexitem">
+Ning Qian.
+ Computing stereo disparity and motion with known binocular cell
+  properties.
+ <em>Neural Comput.</em>, 6:390-404, May 1994.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#QianStereoAndMotion">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="arndt1995human">11</a>]
+</td>
+<td class="bibtexitem">
+P.A. Arndt, H.A. Mallot, and H.H. Bulthoff.
+ Human stereovision without localized image features.
+ <em>Biological cybernetics</em>, 72(4):279-293, 1995.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#arndt1995human">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="FleetBinocular">12</a>]
+</td>
+<td class="bibtexitem">
+D.&nbsp;Fleet, H.&nbsp;Wagner, and D.&nbsp;Heeger.
+ Neural encoding of binocular disparity: Energy models, position
+  shifts and phase shifts.
+ <em>Vision Research</em>, 36(12):1839-1857, June 1996.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#FleetBinocular">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="Rao99learninglie">13</a>]
+</td>
+<td class="bibtexitem">
+Rajesh Rao and Daniel Ruderman.
+ Learning lie groups for invariant visual perception.
+ In <em>In Advances in Neural Information Processing Systems 11</em>. MIT
+  Press, 1999.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#Rao99learninglie">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="tenenbaum00separating">14</a>]
+</td>
+<td class="bibtexitem">
+Joshua Tenenbaum and William Freeman.
+ Separating style and content with bilinear models.
+ <em>Neural Computation</em>, 12(6):1247-1283, 2000.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#tenenbaum00separating">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="HyvarinenISA">15</a>]
+</td>
+<td class="bibtexitem">
+Aapo Hyvärinen and Patrik Hoyer.
+ Emergence of phase- and shift-invariant features by decomposition of
+  natural images into independent feature subspaces.
+ <em>Neural Comput.</em>, 12:1705-1720, July 2000.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#HyvarinenISA">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="KTH">16</a>]
+</td>
+<td class="bibtexitem">
+C.&nbsp;Schuldt, I.&nbsp;Laptev, and B.&nbsp;Caputo.
+ Recognizing human actions: A local svm approach.
+ <em>International Conf. on Pattern Recognition</em>, 2004.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#KTH">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="GrimesRao">17</a>]
+</td>
+<td class="bibtexitem">
+David Grimes and Rajesh Rao.
+ Bilinear sparse coding for invariant vision.
+ <em>Neural Computation</em>, 17(1):47-73, 2005.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#GrimesRao">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="olshausenetal">18</a>]
+</td>
+<td class="bibtexitem">
+Bruno Olshausen, Charles Cadieu, Jack Culpepper, and David Warland.
+ Bilinear models of natural images.
+ In <em>SPIE Proceedings: Human Vision Electronic Imaging XII</em>,
+  San Jose, 2007.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#olshausenetal">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="MiaoRao">19</a>]
+</td>
+<td class="bibtexitem">
+Xu&nbsp;Miao and Rajesh Rao.
+ Learning the lie groups of visual invariance.
+ <em>Neural Computation</em>, 19(10):2665-2693, 2007.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#MiaoRao">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="imtrans">20</a>]
+</td>
+<td class="bibtexitem">
+Roland Memisevic and Geoffrey Hinton.
+ Unsupervised learning of image transformations.
+ In <em>Proceedings of IEEE Conference on Computer Vision and Pattern
+  Recognition</em>, 2007.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#imtrans">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="bethge2007">21</a>]
+</td>
+<td class="bibtexitem">
+M&nbsp;Bethge, S&nbsp;Gerwinn, and JH&nbsp;Macke.
+ Unsupervised learning of a steerable basis for invariant image
+  representations.
+ In B.&nbsp;E. Rogowitz, editor, <em>Human Vision and Electronic Imaging
+  XII</em>, pages 1-12, Bellingham, WA, USA, February 2007.
+  Max-Planck-Gesellschaft, SPIE.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#bethge2007">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="marszalek09">22</a>]
+</td>
+<td class="bibtexitem">
+Marcin Marszalek, Ivan Laptev, and Cordelia Schmid.
+ Actions in context.
+ In <em>IEEE Conference on Computer Vision &amp; Pattern Recognition</em>,
+  2009.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#marszalek09">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="NaturalImageStatistics">23</a>]
+</td>
+<td class="bibtexitem">
+A.&nbsp;Hyvarinen, J.&nbsp;Hurri, , and Patrik&nbsp;O. Hoyer.
+ <em>Natural Image Statistics: A Probabilistic Approach to Early
+  Computational Vision</em>.
+ Springer Verlag, 2009.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#NaturalImageStatistics">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="taylorFactoredConditional">24</a>]
+</td>
+<td class="bibtexitem">
+Graham Taylor and Geoffrey Hinton.
+ Factored conditional restricted Boltzmann machines for modeling
+  motion style.
+ In Léon Bottou and Michael Littman, editors, <em>Proceedings of
+  the 26th International Conference on Machine Learning</em>, pages 1025-1032,
+  Montreal, June 2009. Omnipress.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#taylorFactoredConditional">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="taylor-eccv-10">25</a>]
+</td>
+<td class="bibtexitem">
+Graham, W. Taylor, Rob Fergus, Yann LeCun, and Christoph Bregler.
+ Convolutional learning of spatio-temporal features.
+ In <em>Proc. European Conference on Computer Vision (ECCV'10)</em>,
+  2010.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#taylor-eccv-10">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="larochelle_glimpses">26</a>]
+</td>
+<td class="bibtexitem">
+Hugo Larochelle and Geoffrey Hinton.
+ Learning to combine foveal glimpses with a third-order boltzmann
+  machine.
+ In <em>Advances in Neural Information Processing Systems 23</em>, pages
+  1243-1251. 2010.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#larochelle_glimpses">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="dahl_mcrbmtimit">27</a>]
+</td>
+<td class="bibtexitem">
+George&nbsp;E. Dahl, Marc'Aurelio Ranzato, Abdel-rahman Mohamed, and Geoffrey&nbsp;E.
+  Hinton.
+ Phone recognition with the mean-covariance restricted Boltzmann
+  machine.
+ In <em>Advances in Neural Information Processing Systems 23</em>, pages
+  469-477. 2010.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#dahl_mcrbmtimit">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="huang_classspecific">28</a>]
+</td>
+<td class="bibtexitem">
+Gary&nbsp;B. Huang and Erik Learned-Miller.
+ Learning class-specific image transformations with higher-order
+  Boltzmann machines.
+ In <em>In Workshop on Structured Models in Computer Vision at IEEE
+  CVPR, 2010</em>, 2010.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#huang_classspecific">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="factoredGBM">29</a>]
+</td>
+<td class="bibtexitem">
+Roland Memisevic and Geoffrey&nbsp;E Hinton.
+ Learning to represent spatial transformations with factored
+  higher-order Boltzmann machines.
+ <em>Neural Computation</em>, 22(6):1473-92, 2010.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#factoredGBM">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="mcrbm">30</a>]
+</td>
+<td class="bibtexitem">
+Marc'Aurelio Ranzato and Geoffrey&nbsp;E. Hinton.
+ Modeling Pixel Means and Covariances Using Factorized Third-Order
+  Boltzmann Machines.
+ In <em>Computer Vision and Pattern Recognition</em>, pages 2551-2558,
+  2010.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#mcrbm">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="higherordergradientbased">31</a>]
+</td>
+<td class="bibtexitem">
+Roland Memisevic.
+ Gradient-based learning of higher-order image features.
+ In <em>Proceedings of the International Conference on Computer
+  Vision (ICCV)</em>, 2011.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#higherordergradientbased">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="201106-cvpr-le">32</a>]
+</td>
+<td class="bibtexitem">
+Q.V. Le, W.Y. Zou, S.Y. Yeung, and A.Y. Ng.
+ Learning hierarchical spatio-temporal features for action recognition
+  with independent subspace analysis.
+ In <em>Proc. CVPR, 2011</em>. IEEE, 2011.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#201106-cvpr-le">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="LieGroupPredictive">33</a>]
+</td>
+<td class="bibtexitem">
+Ching&nbsp;Ming Wang, Jascha Sohl-Dickstein, Ivana Tosic, and Bruno&nbsp;A. Olshausen.
+ Lie group transformation models for predictive video coding.
+ In <em>DCC</em>, pages 83-92, 2011.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#LieGroupPredictive">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="jointImtrans">34</a>]
+</td>
+<td class="bibtexitem">
+J.&nbsp;Susskind, R.&nbsp;Memisevic, G.&nbsp;Hinton, and M.&nbsp;Pollefeys.
+ Modeling the joint density of two images under a variety of
+  transformations.
+ In <em>Proceedings of IEEE Conference on Computer Vision and Pattern
+  Recognition</em>, 2011.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#jointImtrans">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="TosicStereodict">35</a>]
+</td>
+<td class="bibtexitem">
+I.&nbsp;Tosic and P.&nbsp;Frossard.
+ Dictionary learning in stereo imaging.
+ <em>IEEE Transactions on Image Processing</em>, 20(4), 2011.
+[&nbsp;<a href="http://www-labs.iro.umontreal.ca/~memisevr/multiview-feature-learning-cvpr/relational_bib.html#TosicStereodict">bib</a>&nbsp;]
+
+</td>
+</tr>
+</tbody></table><hr><p><em>Bibliography table was generated by
+<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.95.</em></p>
+</td><td>
+
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+</td></tr></tbody></table></body></html>

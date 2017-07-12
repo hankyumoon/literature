@@ -1,0 +1,93 @@
+/*
+ * Name: style.css
+ * Version: 0.1
+ * Author: Jovan Stojanovic - TechTalks.Tv
+ *
+ * NOTE: please if you modify some part of this document add ["New"] styles in proper section. Thanks
+ * 
+ * DOCUMENT STRUCTURE:
+ * 
+ * 1.  GLOBAL STYLES
+ * 2.  WELCOME PAGE
+ * 3.  WATCH LATER PAGE
+ * 4.  OTHER STYLES
+ * 5.  
+ * 
+ * 
+*/
+
+/* GLOBAL STYLES  - Section for navigation, sidebar etc...
+ ************************************************************/
+.dashboard .image_holder {
+    width:83px;
+}
+
+.dashboard ul.nav {
+    float:right;
+    width:auto;
+    right:0px;
+    left:0px;
+}
+
+.dashboard ul.nav li {
+    padding:3px 5px;
+}
+
+.dashboard ul.nav li a {
+    text-transform:none;
+    font-size:13px;
+    position:relative;
+}
+
+ul.nav li.staff a {
+    background: url('../img/arrow_down.png') no-repeat 71px 13px;
+    width:63px;
+}
+
+ul.nav li.staff a:hover {
+    color:#FFCC00;
+    background: url('../img/arrow_down.png') #1C2226 no-repeat 71px -47px;
+}
+
+ul.nav li.activities a {
+    background: url('../img/arrow_down.png') no-repeat 76px 13px;
+    width:69px;
+}
+
+ul.nav li.activities a:hover {
+    color:#FFCC00;
+    background: url('../img/arrow_down.png') #1C2226 no-repeat 76px -47px;
+}
+
+ul.nav li.account a {
+    background: url('../img/arrow_down.png') no-repeat 71px 13px;
+    width:63px;
+}
+
+ul.nav li.account a:hover {
+    color:#FFCC00;
+    background: url('../img/arrow_down.png') #1C2226 no-repeat 71px -47px;
+}
+
+ul.nav li a span.num_notice {
+    background:#990000;
+    border: 3px solid #2D393E;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 10px;
+    padding: 6px 8px 4px 7px;
+    position: absolute;
+    top: -5px;
+}
+
+
+/* WELCOME PAGE - Home page for Dashboard
+ ************************************************************/
+
+
+/* WATCH LATER - Watch later list for Dashboard
+ ************************************************************/
+
+
+/* OTHER
+ ************************************************************/

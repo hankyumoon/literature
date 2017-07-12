@@ -1,0 +1,485 @@
+/*
+ * Name: style.css
+ * Version: 0.1
+ * Author: Jovan Stojanovic - TechTalks.Tv
+ *
+ * NOTE: please if you modify some part of this document add ["New"] styles in proper section. Thanks
+ *
+ * DOCUMENT STRUCTURE:
+ *
+ * 1.  LOGIN PAGE (dropDown)
+ * 2.  CREATE ACCOUNT (popUp)
+ * 3.  NEWLETTER FOOTER
+ *
+ *
+*/
+
+
+
+/* LOGIN PAGE (dropDown)
+ ***************************************************/
+.login_form {
+    right: -30px;
+    margin: 0;
+    position: absolute;
+    top: 15px;
+    width: 230px;
+    z-index: 999999;
+    padding:0;
+    list-style: none;
+    display:none;
+}
+
+.login_form form {
+    padding:0px;
+}
+
+.login_form .arrow_login {
+    background:url("../img/arrow_login.png") top left no-repeat;
+    width:26px;
+    height:14px;
+    position:relative;
+    top:3px;
+    right:-169px;
+}
+
+.login_form .login_content {
+    background: url("../img/create_account_back.png") repeat left top;
+    border: 3px solid #3C4B50;
+    box-shadow: 0px 0px 5px #000000;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+    border-radius: 20px;
+    padding:20px;
+    width:180px;
+}
+
+fieldset.login_top {
+    margin:0px;
+    padding:0px;
+    border:0px none;
+}
+
+fieldset.login_top label {
+    clear: left;
+    font-size: 12px;
+    margin: 0 0 3px 3px;
+    text-shadow: none;
+}
+
+fieldset.login_top input[type="text"],
+fieldset.login_top input[type="password"] {
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -ms-border-radius: 4px 4px 4px 4px;
+    -o-border-radius: 4px 4px 4px 4px;
+    clear: left;
+    color: #ffffff;
+    font-weight:lighter;
+    font-size: 12px;
+    margin: 0 0 14px;
+    padding: 5px 5px 4px;
+    width: 170px;
+    background: none repeat scroll 0 0 #37464B;
+    border: 1px solid #1C2226;
+    box-shadow: 0 0 1px #475B69;
+}
+
+fieldset.login_top .forgotPass {
+    color: #6C8A97;
+
+    float: left;
+    font-size: 11px;
+    margin: 10px 0 0;
+    text-shadow: 0 1px 0 #000000;
+    width: 99px;
+}
+
+.upload_action_holder {
+	clear:left;
+	position:relative;
+	left:145px;
+}
+
+.login_submit {
+    background: #FFCC00;
+    border: 1px solid #fff;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 1px #475B69;
+    font-size: 12px;
+    padding: 10px 15px 9px 15px;
+    position:relative;
+    right:0px;
+    bottom:0px;
+    color:#333333;
+}
+
+.login_submit:hover {
+    background: #EDBF02;
+    color:#000;
+}
+
+.grey_small {
+    background: #dedede;
+    border: 1px solid #fff;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 1px #475B69;
+    font-size: 12px;
+    padding: 10px 15px 9px 15px;
+    position:relative;
+    right:0px;
+    bottom:0px;
+    color:#333333;
+    margin:0px 10px;
+}
+
+.grey_small:hover {
+    background: #cccccc;
+    color:#000;
+}
+
+.form_block {
+	padding:10px;
+	display:block;
+	clear:both;
+}
+
+
+/* Forgot Password */
+fieldset.forgot_top {
+    margin:0px;
+    padding:0px;
+    border:0px none;
+}
+
+.forgot_top label {
+    clear: left;
+    float: left;
+    font-size: 12px;
+    margin: 0 0 3px 3px;
+    text-shadow: none;
+}
+
+.forgot_top input[type="text"] {
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -ms-border-radius: 4px 4px 4px 4px;
+    -o-border-radius: 4px 4px 4px 4px;
+    clear: left;
+    color: #FFFFFF;
+    font-weight:lighter;
+    font-size: 12px;
+    margin: 0 0 0px;
+    padding: 5px 5px 4px;
+    width: 170px;
+    background: none repeat scroll 0 0 #37464B;
+    border: 1px solid #1C2226;
+    box-shadow: 0 0 1px #475B69;
+}
+
+.forgot_top span {
+    color: #6C8A97;
+    display: block;
+    float: left;
+    width:100%;
+    font-size: 11px;
+    margin: 10px 0 0;
+    text-shadow: 0 1px 0 #000000;
+}
+
+.forgot_top .forgot_submit {
+    background: #FFCC00;
+    border: 1px solid #1C2226;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px #475B69;
+    float: right;
+    font-size: 12px;
+    padding: 7px 11px 6px;
+}
+
+
+/* CREATE ACCOUNT (popUp)
+ ***************************************************/
+.background_black {
+    background:#000000;
+    opacity:0.5;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: 9999;
+    display:none;
+    top:0px;
+    left:0px;
+    background: url("../img/background_black.png") top left repeat;
+}
+
+.createAccountPopup {
+    background: url("../img/create_account_back.png") repeat left top;
+    border: 3px solid #3C4B50;
+    box-shadow: 0px 0px 5px #000000;
+    left: 50%;
+    margin: 0px 0px 0px -235px;
+    position: absolute;
+    top: 20%;
+    width: 410px;
+    z-index: 99999;
+    padding:30px 30px 30px 30px;
+    border-radius: 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -ms-border-radius: 20px 20px 20px 20px;
+    -o-border-radius: 20px 20px 20px 20px;
+    display:none;
+    z-index: 9999;
+    behavior: url(/site_media/static/js/css3pie/PIE.htc);
+}
+
+.createAccountPopup form {
+    padding:0px;
+}
+
+.createAccountPopup .close {
+    background: url("../img/account_close.png") no-repeat left top;
+    color: #22282C;
+    font-size: 15px;
+    padding: 7px 35px 9px 20px;
+    position: absolute;
+    right: -2px;
+    text-decoration: none;
+    top: 0;
+}
+
+.createAccountPopup h2 {
+    color: #FFCC00;
+    display: block;
+    font-size: 22px;
+    font-weight: lighter;
+    margin: 0;
+    text-shadow: 0px 1px 0px #000;
+}
+
+.createAccountPopup p {
+    color: #666666;
+    float:left;
+    font-size: 13px;
+    font-weight: lighter;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    text-shadow: 0 1px 0 #000000;
+    font-style:italic;
+}
+
+fieldset.account_top {
+    border: 0 none;
+    display: block;
+    margin: 25px 0 0px 0px;
+    padding:0px;
+    float:left;
+    position: relative;
+}
+
+.createAccountPopup fieldset label {
+    clear: left;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-shadow: 0 1px 0 #000000;
+    margin:0px 0px 5px 3px;
+}
+
+.createAccountPopup fieldset input[type="text"],
+.createAccountPopup fieldset input[type="password"] {
+    background: none repeat scroll 0 0 #37464B;
+    border: 1px solid #1C2226;
+    box-shadow: 0px 0px 1px #475B69;
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 0 0 15px;
+    padding: 9px 5px 7px 10px;
+    width: 395px;
+    color:#22282C;
+    border-radius:3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -ms-border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px 3px;
+    float:left;
+}
+
+.createAccountPopup fieldset input:focus {
+    color:#fff;
+}
+
+.createAccountPopup .error {
+    border: 1px solid #990000;
+}
+
+.createAccountPopup fieldset.account_pass_left,
+.createAccountPopup fieldset.account_pass_right {
+    float:left;
+    width:205px;
+    margin:15px 0;
+    border:0px none;
+    padding:0px;
+    position:relative;
+}
+
+.createAccountPopup fieldset.account_pass_left label,
+.createAccountPopup fieldset.account_pass_right label {
+    float:left;
+}
+
+.createAccountPopup fieldset.account_pass_left input,
+.createAccountPopup fieldset.account_pass_right input {
+    float:left;
+    width:177px;
+    position:relative;
+    display:block;
+}
+
+.createAccountPopup fieldset.account_pass_right {
+    width:195px;
+    margin-left:10px;
+}
+
+.createAccountPopup label {
+    color:#fff;
+    font-size:11px;
+    text-shadow: 0px 0px 1px #000;
+    margin-top:10px;
+    clear:left;
+    display:block;
+}
+
+.createAccountPopup label input[type="checkbox"] {
+    margin-right:5px;
+    clear:left;
+}
+
+.createAccountPopup label a {
+    color:#99C5E5;
+    text-decoration: none;
+}
+
+.createAccountPopup label a:hover {
+    text-decoration: underline;
+}
+
+.createAccountPopup .create_submit {
+    background:#FFCC00;
+    border: 1px solid #1C2226;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 2px #475B69;
+    float: right;
+    font-size: 14px;
+    padding: 12px 18px 9px;
+    top:0px;
+    position:relative;
+    clear:left;
+}
+
+.createAccountPopup .create_submit:hover {
+    background: #EDBF02;
+}
+
+.createAccountPopup .social_account {
+    border: 0 none;
+    clear: both;
+    color: #FFFFFF;
+    display: block;
+    padding: 30px 0px 20px 0px;
+}
+
+.createAccountPopup .social_account h4 {
+
+}
+
+
+/* NEWLETTER FOOTER
+ *****************************************/
+.signup_newsletter {
+    position:relative;
+    float:left;
+    width:305px;
+    clear:left;
+    margin:10px 0px 0px 0px;
+}
+
+.signup_newsletter form {
+    padding:0px;
+}
+
+.signup_newsletter_back {
+    background: url('../img/signup_newsletter_back.png') top left no-repeat;
+    width:304px;
+    height:42px;
+    float:left;
+    position:relative;
+}
+
+.ie7 .signup_newsletter_back,
+.ie8 .signup_newsletter_back {
+    background: url('../img/ie_signup_newsletter_back.png') top left no-repeat;
+}
+
+.signup_newsletter label {
+    color:#fff;
+    text-shadow: 0px 1px 1px #000;
+    font-size:12px;
+    font-style:italic;
+    margin:0px 0px 0px 10px;
+    width:100%;
+}
+
+.signup_newsletter input {
+    background:#253135;
+    border: 0 none;
+    border-radius: 15px 15px 15px 15px;
+    color: #6C8A97;
+    font-size: 11px;
+    font-weight: lighter;
+    left: 5px;
+    padding: 12px 15px 9px;
+    position: absolute;
+    top: 4px;
+    width: 200px;
+}
+
+.ie7 .signup_newsletter_back input[type="text"],
+.ie8 .signup_newsletter_back input[type="text"] {
+    padding: 10px 15px 9px;
+}
+
+.signup_newsletter input:focus {
+    border:0px none;
+}
+
+.signup_newsletter .newsletter_button {
+    background:#161C20;
+    border: 1px solid #2D393E;
+    height: 30px;
+    padding: 6px 10px;
+    position: absolute;
+    left: 230px;
+    top: 6px;
+    width: 70px;
+}

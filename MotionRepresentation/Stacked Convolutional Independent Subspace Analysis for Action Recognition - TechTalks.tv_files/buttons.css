@@ -1,0 +1,334 @@
+/*
+ * Name: style.css
+ * Version: 0.1
+ * Author: Jovan Stojanovic - TechTalks.Tv
+ *
+ * NOTE: please if you modify some part of this document add ["New"] styles in proper section. Thanks
+ *
+ * DOCUMENT STRUCTURE:
+ *
+ * 1.  WATCH VIDEO
+ * 2.  WATCH LATER
+ * 3.  SHARE ALL (OPEN POPUP)
+ * 4.  EXTRA INFO
+ * 5.  UPLOAD BUTTON
+ * 6.  DOWNLOAD BUTTON
+ * 7.  SHARE VIDEO
+ * 8.  FEEDBACK
+ * 9.  WATCH LATER ON WATCH PAGE
+ * 10. ADD TO PLAYLIST
+ * 11. ADD TO FAVORITE
+ * 12. SHARE TWITTER BUTTON
+ * 13. SHARE FACEBOOK BUTTON
+ * 14. SHARE GOOGLE PLUS BUTTON
+ * 15. SHARE TWITTER BUTTON ON WATCH PAGE
+ * 17. SHARE FACEBOOK BUTTON ON WATCH PAGE
+ * 16. SHARE GOOGLE PLUS BUTTON ON WATCH PAGE
+ * 17.
+ *
+ */
+
+
+
+/* 1. WATCH VIDEO
+ ****************************************/
+
+a.watch {
+    background: url("../img/watch.png") no-repeat 0px 0px;
+}
+
+a.watch:hover {
+    background: url("../img/watch.png") no-repeat 0px -33px;
+}
+
+
+/* WATCH LATER
+ ****************************************/
+a.later {
+    background: url("../img/later.png") no-repeat 0px 0px;
+}
+
+a.later:hover {
+    background: url("../img/later.png") no-repeat 0px -33px;
+}
+
+a.later.wl {
+    background: url("../img/later.png") no-repeat 0px -66px;
+}
+
+/* SLIDESHOW
+ ****************************************/
+a.slideshow {
+    background: url("../img/slideshow.png") no-repeat 0px -1px;
+}
+
+a.slideshow:hover {
+    background: url("../img/slideshow.png") no-repeat 0px -43px;
+}
+
+/* SHARE ALL (OPEN POPUP)
+ ****************************************/
+a.share {
+    background: url("../img/share.png") no-repeat 0px 0px;
+}
+
+a.share:hover {
+    background: url("../img/share.png") no-repeat 0px -33px;
+}
+
+
+/* EXTRA INFO
+ ****************************************/
+a.extra_info {
+    background: url("../img/extra_info.png") no-repeat 0px 0px;
+}
+
+a.extra_info:hover {
+    background: url("../img/extra_info.png") no-repeat 0px -33px;
+}
+
+
+/* UPLOAD BUTTON
+ ****************************************/
+a.upload {
+    background: url("../img/upload.png") no-repeat 0px 0px;
+}
+
+a.upload:hover {
+    background: url("../img/upload.png") no-repeat 0px -33px;
+}
+
+
+/* DOWNLOAD BUTTON
+ ****************************************/
+a.download {
+    background: url("../img/download.png") no-repeat 0px 0px;
+}
+
+a.download:hover {
+    background: url("../img/download.png") no-repeat 0px -33px;
+}
+
+
+/* SHARE VIDEO
+ ****************************************/
+a.share_video {
+    background: url("../img/share_video.png") no-repeat 0px 0px;
+}
+
+a.share_video:hover {
+    background: url("../img/share_video.png") no-repeat 0px -33px;
+}
+
+
+/* FEEDBACK
+ ****************************************/
+a.feedback {
+    background: url("../img/feedback.png") no-repeat 0px 0px;
+}
+
+a.feedback:hover {
+    background: url("../img/feedback.png") no-repeat 0px -33px;
+}
+
+
+/* WATCH LATER ON WATCH PAGE
+ ****************************************/
+a.watch_later {
+    background: url("../img/watch_later.png") no-repeat 0px 0px;
+}
+
+a.watch_later:hover {
+    background: url("../img/watch_later.png") no-repeat -38px 0px;
+}
+
+a.watch_later.fokus {
+    background: url("../img/watch_later.png") no-repeat -77px 0px;
+}
+
+
+/* ADD TO PLAYLIST ON WATCH PAGE
+ ****************************************/
+a.playlist {
+    background: url("../img/playlist.png") no-repeat 0px 0px;
+}
+
+a.playlist:hover {
+    background: url("../img/playlist.png") no-repeat -38px 0px;
+}
+
+a.playlist.fokus {
+    background: url("../img/playlist.png") no-repeat -77px 0px;
+}
+
+
+/* ADD TO FAVORITE ON WATCH PAGE
+ ****************************************/
+a.favorite {
+    background: url("../img/favorite.png") no-repeat 0px 0px;
+}
+
+a.favorite:hover {
+    background: url("../img/favorite.png") no-repeat -38px 0px;
+}
+
+a.favorite.fokus {
+    background: url("../img/favorite.png") no-repeat -77px 0px;
+}
+
+/* SHARE TWITTER BUTTON
+ ****************************************/
+ul.share_holder .share_twitter a {
+    float:left;
+    width:31px;
+    height:31px;
+    background:url('../img/social_icons_list.png') 0px 0px no-repeat;
+    text-indent: 99999px;
+    padding:0px;
+}
+
+ul.share_holder .share_twitter a:hover {
+    background:url('../img/social_icons_list.png') 0px -38px no-repeat;
+}
+
+
+/* SHARE FACEBOOK BUTTON
+ ****************************************/
+ul.share_holder .share_facebook a {
+    float:left;
+    width:31px;
+    height:31px;
+    background:url('../img/social_icons_list.png') -50px 0px no-repeat;
+    text-indent: 99999px;
+    padding:0px;
+}
+
+ul.share_holder .share_facebook a:hover {
+    background:url('../img/social_icons_list.png') -50px -38px no-repeat;
+}
+
+
+/* SHARE GOOGLE PLUS BUTTON
+ ****************************************/
+ul.share_holder .share_googleplus a {
+    float:left;
+    width:31px;
+    height:31px;
+    background:url('../img/social_icons_list.png') -100px 0px no-repeat;
+    text-indent: 99999px;
+    padding:0px;
+}
+
+ul.share_holder .share_googleplus a:hover {
+    background:url('../img/social_icons_list.png') -100px -38px no-repeat;
+}
+
+
+/* SHARE TWITTER BUTTON ON WATCH PAGE
+ ****************************************/
+ul.share_holder_watch .share_twitter a {
+    float:left;
+    width:31px;
+    height:31px;
+    background:url('../img/social_icons_list.png') 0px 0px no-repeat;
+    text-indent: 99999px;
+    padding:0px;
+}
+
+ul.share_holder_watch .share_twitter a:hover {
+    background:url('../img/social_icons_list.png') 0px -38px no-repeat;
+}
+
+
+/* SHARE FACEBOOK BUTTON ON WATCH PAGE
+ ****************************************/
+ul.share_holder_watch .share_facebook a {
+    float:left;
+    width:31px;
+    height:31px;
+    background:url('../img/social_icons_list.png') -50px 0px no-repeat;
+    text-indent: 99999px;
+    padding:0px;
+}
+
+ul.share_holder_watch .share_facebook a:hover {
+    background:url('../img/social_icons_list.png') -50px -38px no-repeat;
+}
+
+
+/* SHARE GOOGLE PLUS BUTTON ON WATCH PAGE
+ ****************************************/
+ul.share_holder_watch .share_googleplus a {
+    float:left;
+    width:31px;
+    height:31px;
+    background:url('../img/social_icons_list.png') -100px 0px no-repeat;
+    text-indent: 99999px;
+    padding:0px;
+}
+
+ul.share_holder_watch .share_googleplus a:hover {
+    background:url('../img/social_icons_list.png') -100px -38px no-repeat;
+}
+
+/* ORAL WORKSHOP TUTORIAL PURCHASE
+ ****************************************/
+a.oral {
+    color: #333;
+    font-size: 10px;
+    padding: 11px 0 10px 37px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 11px;
+    background: url("../img/oral.png") no-repeat 0px 0px;
+    cursor: pointer;
+}
+
+a.oral:hover {
+    background: url("../img/oral.png") no-repeat 0px -39px;
+}
+
+a.workshop {
+    color: #333;
+    font-size: 10px;
+    padding: 11px 0 10px 37px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 11px;
+    background: url("../img/workshop.png") no-repeat 0px 0px;
+    cursor: pointer;
+}
+
+a.workshop:hover {
+    background: url("../img/workshop.png") no-repeat 0px -39px;
+}
+
+a.tutorial {
+    color: #333;
+    font-size: 10px;
+    padding: 11px 0 10px 37px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 11px;
+    background: url("../img/tutorial.png") no-repeat 0px 0px;
+    cursor: pointer;
+}
+
+a.tutorial:hover {
+    background: url("../img/tutorial.png") no-repeat 0px -39px;
+}
+
+a.purchase {
+    color: #333;
+    font-size: 10px;
+    padding: 11px 0 10px 37px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 11px;
+    background: url("../img/purchase.png") no-repeat 0px 0px;
+    cursor: pointer;
+}
+
+a.purchase:hover {
+    background: url("../img/purchase.png") no-repeat 0px -39px;
+}
